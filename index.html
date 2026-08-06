@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>David Jefferson AGBENYINOU — Portfolio</title>
+<meta name="description" content="Étudiant ASR (Administration Systèmes, Réseaux et Sécurité) à ESGIS, Lomé. Développement web, réseaux et cybersécurité.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ======= NAV ======= -->
+<header class="navbar">
+  <a href="#accueil" class="logo">&lt;DJ<span>/</span>&gt;</a>
+
+  <nav class="nav-links" id="navLinks">
+    <ul>
+      <li><a href="#accueil" class="nav-link active" data-target="accueil">Accueil</a></li>
+      <li><a href="#projets" class="nav-link" data-target="projets">Projets</a></li>
+      <li><a href="#competences" class="nav-link" data-target="competences">Compétences</a></li>
+      <li><a href="#contact" class="nav-link" data-target="contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-accent nav-cta">Discutons</a>
+  </nav>
+
+  <button class="menu-hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <!-- ======= HERO ======= -->
+  <section class="hero" id="accueil">
+    <div class="hero-topology" aria-hidden="true">
+      <svg viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
+        <g class="topo-lines" stroke="url(#lineGrad)" stroke-width="1.2" fill="none">
+          <path id="p1" d="M120,140 L340,220 L560,120 L790,210" />
+          <path id="p2" d="M90,420 L300,380 L520,470 L760,400" />
+          <path id="p3" d="M340,220 L300,380" />
+          <path id="p4" d="M560,120 L520,470" />
+          <path id="p5" d="M120,140 L90,420" />
+          <path id="p6" d="M790,210 L760,400" />
+          <path id="p7" d="M300,380 L470,600 L680,560" />
+        </g>
+        <defs>
+          <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#4fd1ff" stop-opacity="0.35"/>
+            <stop offset="1" stop-color="#ffb454" stop-opacity="0.25"/>
+          </linearGradient>
+        </defs>
+        <g class="topo-nodes" fill="#0d1219" stroke="#4fd1ff" stroke-width="1.4">
+          <circle cx="120" cy="140" r="5"/>
+          <circle cx="340" cy="220" r="4"/>
+          <circle cx="560" cy="120" r="5"/>
+          <circle cx="790" cy="210" r="4"/>
+          <circle cx="90" cy="420" r="4"/>
+          <circle cx="300" cy="380" r="6"/>
+          <circle cx="520" cy="470" r="4"/>
+          <circle cx="760" cy="400" r="5"/>
+          <circle cx="470" cy="600" r="4"/>
+          <circle cx="680" cy="560" r="4"/>
+        </g>
+        <g class="topo-packets" fill="#ffb454">
+          <circle r="3"><animateMotion dur="4.5s" repeatCount="indefinite" path="M120,140 L340,220 L560,120 L790,210"/></circle>
+          <circle r="3" fill="#4fd1ff"><animateMotion dur="5.5s" begin="0.7s" repeatCount="indefinite" path="M90,420 L300,380 L520,470 L760,400"/></circle>
+          <circle r="2.5"><animateMotion dur="3.2s" begin="1.3s" repeatCount="indefinite" path="M340,220 L300,380"/></circle>
+          <circle r="2.5" fill="#4fd1ff"><animateMotion dur="3.8s" begin="0.4s" repeatCount="indefinite" path="M300,380 L470,600 L680,560"/></circle>
+        </g>
+      </svg>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>David Jefferson<br><span class="highlight">AGBENYINOU</span></h1>
+        <p class="hero-desc">Étudiant 1<sup>ère</sup> année en Administration Systèmes, Réseaux &amp; Sécurité Informatique (ASR) à ESGIS, Lomé. Je conçois des interfaces web soignées et je configure des infrastructures réseau deux faces du même métier : faire tenir les choses ensemble, proprement.</p>
+
+        <div class="hero-actions">
+          <a href="#projets" class="btn btn-accent">Voir mes projets →</a>
+          <a href="#contact" class="btn btn-ghost">Me contacter</a>
+          <a href="carte/Ma_carte_de_profil.html" target="_blank" class="btn btn-ghost">À propos</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hstat"><span class="hstat-val">1<sup>ère</sup></span><span class="hstat-lbl">Année ASR</span></div>
+          <div class="hstat"><span class="hstat-val">04</span><span class="hstat-lbl">Projets livrés</span></div>
+          <div class="hstat"><span class="hstat-val">TCR26</span><span class="hstat-lbl">IdroTech · Compétition</span></div>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <div class="photo-frame">
+          <span class="corner tl"></span><span class="corner tr"></span>
+          <span class="corner bl"></span><span class="corner br"></span>
+          <img src="photo.png" alt="Portrait de David Jefferson AGBENYINOU">
+          <div class="scan-line"></div>
+        </div>
+        <div class="photo-readout">
+          <span class="dot-live"></span>
+          <span class="readout-text">ID · DJA-2026 · LOMÉ, TG</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= PROJETS ======= -->
+  <section id="projets">
+    
+    <h2>Réalisations</h2>
+
+    <div class="filters" role="tablist" aria-label="Filtrer les projets">
+      <button class="filter-pill active" data-filter="all">Tous</button>
+      <button class="filter-pill" data-filter="web">Web</button>
+      <button class="filter-pill" data-filter="form">Formulaire</button>
+      <button class="filter-pill" data-filter="network">Réseau</button>
+      <button class="filter-pill" data-filter="blog">Blog</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+
+      <article class="project-card reveal" data-category="web" tabindex="0"
+        data-title="Site de portfolio personnel"
+        data-tag="Web"
+        data-desc="Site web responsive pour présenter mes compétences, projets et parcours professionnel."
+        data-details="Conçu de zéro en HTML/CSS/JS, sans framework. Accent mis sur une navigation claire, un design system cohérent (variables CSS, typographie modulaire) et une expérience 100% responsive, du mobile au desktop."
+        data-stack="HTML5,CSS3,JavaScript">
+        <span class="project-number">01</span>
+        <span class="project-tag tag-web">Web</span>
+        <h3>Site de portfolio personnel</h3>
+        <p>Site web responsive pour présenter mes compétences, projets et parcours professionnel.</p>
+        <span class="project-more">Détails <span class="arrow">→</span></span>
+      </article>
+
+      <article class="project-card reveal" data-category="form" tabindex="0"
+        data-title="Réservation d'hôtel en ligne"
+        data-tag="Formulaire"
+        data-desc="Formulaire de réservation en ligne complet pour un établissement hôtelier."
+        data-details="Parcours de réservation pensé pour minimiser la friction : sélection de dates, type de chambre, validation en temps réel des champs et retours visuels clairs à chaque étape."
+        data-stack="HTML5,CSS3,JavaScript">
+        <span class="project-number">02</span>
+        <span class="project-tag tag-form">Formulaire</span>
+        <h3>Réservation d'hôtel en ligne</h3>
+        <p>Formulaire de réservation en ligne complet pour un établissement hôtelier.</p>
+        <span class="project-more">Détails <span class="arrow">→</span></span>
+      </article>
+
+      <article class="project-card reveal" data-category="network" tabindex="0"
+        data-title="Config. Cisco Packet Tracer"
+        data-tag="Réseau"
+        data-desc="Simulation de réseau local (LAN) avec configuration de routeurs et switchs sous Cisco."
+        data-details="Topologie LAN complète : adressage IP, VLANs, configuration des routeurs et switchs, tests de connectivité. Un exercice direct de mon cursus ASR, orienté administration réseau concrète."
+        data-stack="Cisco Packet Tracer,Routage,VLAN">
+        <span class="project-number">03</span>
+        <span class="project-tag tag-network">Réseau</span>
+        <h3>Config. Cisco Packet Tracer</h3>
+        <p>Simulation de réseau local (LAN) avec configuration de routeurs et switchs sous Cisco.</p>
+        <span class="project-more">Détails <span class="arrow">→</span></span>
+      </article>
+
+      <article class="project-card reveal" data-category="blog" tabindex="0"
+        data-title="Blog développement web"
+        data-tag="Blog"
+        data-desc="Articles, tutoriels et ressources sur le développement web et les technologies émergentes."
+        data-details="Espace éditorial pour documenter ce que j'apprends : notes de cours transformées en tutoriels, retours d'expérience sur mes projets et veille sur les technologies web."
+        data-stack="HTML5,CSS3,Contenu éditorial">
+        <span class="project-number">04</span>
+        <span class="project-tag tag-blog">Blog</span>
+        <h3>Blog développement web</h3>
+        <p>Articles, tutoriels et ressources sur le développement web et les technologies émergentes.</p>
+        <span class="project-more">Détails <span class="arrow">→</span></span>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ======= COMPÉTENCES ======= -->
+  <section id="competences">
+    
+    <h2>Mes compétences</h2>
+
+    <div class="skills-container">
+      <div class="skill-row reveal">
+        <div class="skill-icon" style="background: var(--cyan-dim);">🌐</div>
+        <div class="skill-info">
+          <span class="skill-name">HTML / CSS</span>
+          <span class="skill-sub">Mise en page, responsive design</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" data-width="85" style="background: var(--cyan);"></div></div>
+        <span class="skill-pct">85%</span>
+      </div>
+
+      <div class="skill-row reveal">
+        <div class="skill-icon" style="background: var(--green-dim);">⚙️</div>
+        <div class="skill-info">
+          <span class="skill-name">CSS avancé</span>
+          <span class="skill-sub">Animations, transitions, flexbox, grid</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" data-width="75" style="background: var(--green);"></div></div>
+        <span class="skill-pct">75%</span>
+      </div>
+
+      <div class="skill-row reveal">
+        <div class="skill-icon" style="background: var(--purple-dim);">🖥️</div>
+        <div class="skill-info">
+          <span class="skill-name">PHP / MySQL</span>
+          <span class="skill-sub">Back-end, bases de données</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" data-width="70" style="background: var(--purple);"></div></div>
+        <span class="skill-pct">50%</span>
+      </div>
+      <div class="skill-row reveal">
+        <div class="skill-icon" style="background: var(--red-dim);">🛡️</div>
+        <div class="skill-info">
+          <span class="skill-name">Python</span>
+          <span class="skill-sub">Programmation, automatisation</span> 
+        </div>
+        <div class="skill-bar"><div class="skill-fill" data-width="55" style="background: var(--red);"></div></div>
+        <span class="skill-pct">55%</span>
+      </div>
+
+      <div class="skill-row reveal">
+        <div class="skill-icon" style="background: var(--amber-dim);">⚡</div>
+        <div class="skill-info">
+          <span class="skill-name">JavaScript</span>
+          <span class="skill-sub">Interactivité, logique client</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" data-width="65" style="background: var(--amber);"></div></div>
+        <span class="skill-pct">65%</span>
+      </div>
+
+      <div class="skill-row reveal">
+        <div class="skill-icon" style="background: rgba(163,209,144,0.12);">☕</div>
+        <div class="skill-info">
+          <span class="skill-name">Java</span>
+          <span class="skill-sub">Programmation orientée objet</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" data-width="60" style="background: #a3d190;"></div></div>
+        <span class="skill-pct">60%</span>
+      </div>
+
+      <div class="skill-row reveal">
+        <div class="skill-icon" style="background: rgba(167,139,250,0.12);">🔌</div>
+        <div class="skill-info">
+          <span class="skill-name">Cisco Packet Tracer</span>
+          <span class="skill-sub">Simulation réseau, LAN/WAN</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" data-width="75" style="background: #a78bfa;"></div></div>
+        <span class="skill-pct">90%</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= CONTACT ======= -->
+  <section id="contact">
+    
+    <h2>Contactez-moi</h2>
+
+    <div class="contact-layout">
+      <div class="contact-grid">
+        <a href="tel:+22897612445" class="contact-link reveal">
+          <div class="contact-icon" style="background: var(--cyan-dim);">📞</div>
+          <div>
+            <span class="contact-label">Téléphone</span>
+            <span class="contact-sub">+228 97 61 24 45</span>
+          </div>
+          <span class="contact-arrow">↗</span>
+        </a>
+
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=davidagbenyinou2007@gmail.com" target="_blank" class="contact-link reveal">
+          <div class="contact-icon" style="background: var(--amber-dim);">✉️</div>
+          <div>
+            <span class="contact-label">Email</span>
+            <span class="contact-sub">davidagbenyinou2007@gmail.com</span>
+          </div>
+          <span class="contact-arrow">↗</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/david-jefferson-agbenyinou-1210523b7" target="_blank" class="contact-link reveal">
+          <div class="contact-icon" style="background: rgba(79,209,255,0.12);">💼</div>
+          <div>
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-sub">David Jefferson AGBENYINOU</span>
+          </div>
+          <span class="contact-arrow">↗</span>
+        </a>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="field">
+          <label for="cf-name">Nom</label>
+          <input type="text" id="cf-name" name="name" placeholder="Ton nom">
+          <span class="field-error" id="err-name"></span>
+        </div>
+        <div class="field">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" placeholder="ton.email@gmail.com">
+          <span class="field-error" id="err-email"></span>
+        </div>
+        <div class="field">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="4" placeholder="Ton message..."></textarea>
+          <span class="field-error" id="err-message"></span>
+        </div>
+        <button type="submit" class="btn btn-accent form-submit">
+          <span class="btn-label">Envoyer le message</span>
+        </button>
+        <p class="form-success" id="formSuccess">Merci ! Votre message a été envoyé avec succès.</p>
+        
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 David Jefferson AGBENYINOU <span class="footer-dot">·</span> Tous droits réservés</p>
+  <p class="footer-mono">SRI Student · Sysadmin &amp; Web Developer · Lomé, TG</p>
+</footer>
+
+<!-- ======= MODALE PROJET ======= -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Fermer">✕</button>
+    <span class="project-tag" id="modalTag"></span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+    <div class="modal-stack" id="modalStack"></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init("ujX6UVch8fY5Ny7AT");</script>
+<script src="script.js"></script>
+</body>
+</html>
