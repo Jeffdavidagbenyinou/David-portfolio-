@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalDesc = document.getElementById('modalDesc');
   const modalStack = document.getElementById('modalStack');
 
-  const tagClassMap = { Web: 'tag-web', Formulaire: 'tag-form', Réseau: 'tag-network', Blog: 'tag-blog' };
+  const tagClassMap = { Web: 'tag-web', Formulaire: 'tag-form', Réseau: 'tag-network', Blog: 'tag-blog', Club: 'tag-form', Certification: 'tag-network', Talent: 'tag-blog' };
 
   function openModal(card) {
     modalTitle.textContent = card.dataset.title;
@@ -103,6 +103,19 @@ document.addEventListener('DOMContentLoaded', () => {
       span.textContent = item.trim();
       modalStack.appendChild(span);
     });
+
+    const existingLink = document.getElementById('modalLink');
+    if (existingLink) existingLink.remove();
+    if (card.dataset.url) {
+      const link = document.createElement('a');
+      link.id = 'modalLink';
+      link.className = 'modal-link';
+      link.href = card.dataset.url;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.textContent = 'Voir le site ↗';
+      modalStack.insertAdjacentElement('afterend', link);
+    }
 
     modalOverlay.classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -125,7 +138,76 @@ document.addEventListener('DOMContentLoaded', () => {
   modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeModal(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-  /* ---------- 6. FORMULAIRE DE CONTACT (validation en direct) ---------- */
+  /* ---------- 6. MODALE EXPÉRIENCE ---------- */
+  const expModalOverlay = document.getElementById('expModalOverlay');
+  const expModalClose = document.getElementById('expModalClose');
+  const expModalDate = document.getElementById('expModalDate');
+  const expModalTitle = document.getElementById('expModalTitle');
+  const expModalRole = document.getElementById('expModalRole');
+  const expModalDesc = document.getElementById('expModalDesc');
+  const expModalPoints = document.getElementById('expModalPoints');
+
+  function openExpModal(card) {
+    expModalDate.textContent = card.dataset.date;
+    expModalTitle.textContent = card.dataset.title;
+    expModalRole.textContent = card.dataset.role;
+    expModalDesc.textContent = card.dataset.desc;
+
+    expModalPoints.innerHTML = '';
+    (card.dataset.points || '').split(',').forEach(item => {
+      if (!item.trim()) return;
+      const li = document.createElement('li');
+      li.textContent = item.trim();
+      expModalPoints.appendChild(li);
+    });
+
+    expModalOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    expModalClose.focus();
+  }
+
+  function closeExpModal() {
+    expModalOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.exp-clickable').forEach(card => {
+    card.addEventListener('click', () => openExpModal(card));
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openExpModal(card); }
+    });
+  });
+
+  expModalClose.addEventListener('click', closeExpModal);
+  expModalOverlay.addEventListener('click', (e) => { if (e.target === expModalOverlay) closeExpModal(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeExpModal(); });
+
+  /* ---------- 6b. MODALE À PROPOS ---------- */
+  const aboutTrigger = document.getElementById('aboutTrigger');
+  const aboutModalOverlay = document.getElementById('aboutModalOverlay');
+  const aboutModalClose = document.getElementById('aboutModalClose');
+
+  function openAboutModal() {
+    aboutModalOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    aboutModalClose.focus();
+  }
+  function closeAboutModal() {
+    aboutModalOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  if (aboutTrigger) {
+    aboutTrigger.addEventListener('click', openAboutModal);
+    aboutTrigger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openAboutModal(); }
+    });
+  }
+  aboutModalClose.addEventListener('click', closeAboutModal);
+  aboutModalOverlay.addEventListener('click', (e) => { if (e.target === aboutModalOverlay) closeAboutModal(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAboutModal(); });
+
+  /* ---------- 7. FORMULAIRE DE CONTACT (validation en direct) ---------- */
   const form = document.getElementById('contactForm');
   const nameInput = document.getElementById('cf-name');
   const emailInput = document.getElementById('cf-email');
@@ -185,5 +267,87 @@ document.addEventListener('DOMContentLoaded', () => {
     submitBtn.querySelector('.btn-label').textContent = 'Envoyer le message';
   });
 });
+
+  /* ---------- 8. ÉTINCELLES CARTE DISPONIBILITÉ ---------- */
+  const availCard = document.getElementById('availCard');
+  if (availCard) {
+    for (let i = 0; i < 10; i++) {
+      const s = document.createElement('span');
+      s.style.position = 'absolute';
+      s.style.width = '3px';
+      s.style.height = '3px';
+      s.style.borderRadius = '50%';
+      s.style.background = 'var(--cyan)';
+      s.style.left = Math.random() * 100 + '%';
+      s.style.top = Math.random() * 100 + '%';
+      s.style.opacity = '0';
+      s.style.animation = 'sparkFade ' + (2 + Math.random() * 2) + 's ease-in-out infinite';
+      s.style.animationDelay = (Math.random() * 3) + 's';
+      availCard.appendChild(s);
+    }
+  }
+
+  /* ---------- 9. RÉSEAUX DE PARTICULES (Réalisations / Compétences / Expérience / Contact) ---------- */
+  function initParticleNet(container) {
+    const canvas = container.querySelector('canvas');
+    const nctx = canvas.getContext('2d');
+    let particles = [];
+
+    function makeNetParticles() {
+      particles = Array.from({ length: 45 }, () => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.35,
+        vy: (Math.random() - 0.5) * 0.35,
+        r: Math.random() * 2.2 + 1,
+      }));
+    }
+
+    function resizeNet() {
+      const w = container.clientWidth;
+      const h = container.clientHeight;
+      if (!w || !h) return;
+      canvas.width = w;
+      canvas.height = h;
+      makeNetParticles();
+    }
+    resizeNet();
+    window.addEventListener('resize', resizeNet);
+    window.addEventListener('load', resizeNet);
+    setTimeout(resizeNet, 300);
+
+    function drawNet() {
+      if (canvas.width && canvas.height) {
+        nctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+          p.x += p.vx; p.y += p.vy;
+          if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+          if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+          nctx.beginPath();
+          nctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          nctx.fillStyle = 'rgba(79,209,255,0.8)';
+          nctx.fill();
+        });
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 130) {
+              nctx.beginPath();
+              nctx.moveTo(particles[i].x, particles[i].y);
+              nctx.lineTo(particles[j].x, particles[j].y);
+              nctx.strokeStyle = 'rgba(79,209,255,' + (0.32 * (1 - dist / 130)) + ')';
+              nctx.lineWidth = 0.9;
+              nctx.stroke();
+            }
+          }
+        }
+      }
+      requestAnimationFrame(drawNet);
+    }
+    drawNet();
+  }
+
+  document.querySelectorAll('.section-net').forEach(initParticleNet);
 
 });

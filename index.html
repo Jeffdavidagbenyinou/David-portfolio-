@@ -21,7 +21,9 @@
       <li><a href="#accueil" class="nav-link active" data-target="accueil">Accueil</a></li>
       <li><a href="#projets" class="nav-link" data-target="projets">Projets</a></li>
       <li><a href="#competences" class="nav-link" data-target="competences">Compétences</a></li>
-      <li><a href="#contact" class="nav-link" data-target="contact">Contact</a></li>
+      <li><a href="#engagements" class="nav-link" data-target="engagements">Engagements</a></li>
+      <li><a href="#parcours" class="nav-link" data-target="parcours">Parcours</a></li>
+      <li><a href="#experience" class="nav-link" data-target="experience">Expérience</a></li>
     </ul>
     <a href="#contact" class="btn btn-accent nav-cta">Discutons</a>
   </nav>
@@ -35,53 +37,20 @@
 
   <!-- ======= HERO ======= -->
   <section class="hero" id="accueil">
-    <div class="hero-topology" aria-hidden="true">
-      <svg viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
-        <g class="topo-lines" stroke="url(#lineGrad)" stroke-width="1.2" fill="none">
-          <path id="p1" d="M120,140 L340,220 L560,120 L790,210" />
-          <path id="p2" d="M90,420 L300,380 L520,470 L760,400" />
-          <path id="p3" d="M340,220 L300,380" />
-          <path id="p4" d="M560,120 L520,470" />
-          <path id="p5" d="M120,140 L90,420" />
-          <path id="p6" d="M790,210 L760,400" />
-          <path id="p7" d="M300,380 L470,600 L680,560" />
-        </g>
-        <defs>
-          <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#4fd1ff" stop-opacity="0.35"/>
-            <stop offset="1" stop-color="#ffb454" stop-opacity="0.25"/>
-          </linearGradient>
-        </defs>
-        <g class="topo-nodes" fill="#0d1219" stroke="#4fd1ff" stroke-width="1.4">
-          <circle cx="120" cy="140" r="5"/>
-          <circle cx="340" cy="220" r="4"/>
-          <circle cx="560" cy="120" r="5"/>
-          <circle cx="790" cy="210" r="4"/>
-          <circle cx="90" cy="420" r="4"/>
-          <circle cx="300" cy="380" r="6"/>
-          <circle cx="520" cy="470" r="4"/>
-          <circle cx="760" cy="400" r="5"/>
-          <circle cx="470" cy="600" r="4"/>
-          <circle cx="680" cy="560" r="4"/>
-        </g>
-        <g class="topo-packets" fill="#ffb454">
-          <circle r="3"><animateMotion dur="4.5s" repeatCount="indefinite" path="M120,140 L340,220 L560,120 L790,210"/></circle>
-          <circle r="3" fill="#4fd1ff"><animateMotion dur="5.5s" begin="0.7s" repeatCount="indefinite" path="M90,420 L300,380 L520,470 L760,400"/></circle>
-          <circle r="2.5"><animateMotion dur="3.2s" begin="1.3s" repeatCount="indefinite" path="M340,220 L300,380"/></circle>
-          <circle r="2.5" fill="#4fd1ff"><animateMotion dur="3.8s" begin="0.4s" repeatCount="indefinite" path="M300,380 L470,600 L680,560"/></circle>
-        </g>
-      </svg>
-    </div>
+    <div class="section-net" id="net-hero"><canvas></canvas></div>
 
     <div class="hero-inner">
       <div class="hero-text">
         <h1>David Jefferson<br><span class="highlight">AGBENYINOU</span></h1>
-        <p class="hero-desc">Étudiant 1<sup>ère</sup> année en Administration Systèmes, Réseaux &amp; Sécurité Informatique (ASR) à ESGIS, Lomé. Je conçois des interfaces web soignées et je configure des infrastructures réseau deux faces du même métier : faire tenir les choses ensemble, proprement.</p>
+        <div class="hero-desc-card exp-clickable-about" id="aboutTrigger" tabindex="0">
+          <p class="hero-desc">Étudiant 1<sup>ère</sup> année en Administration Systèmes, Réseaux &amp; Sécurité Informatique (ASR) à ESGIS, Lomé. Je conçois des interfaces web soignées et je configure des infrastructures réseau deux faces du même métier qui me permettent de faire tenir les choses ensemble, proprement.</p>
+          <span class="timeline-more">En savoir plus <span class="arrow">→</span></span>
+        </div>
 
         <div class="hero-actions">
           <a href="#projets" class="btn btn-accent">Voir mes projets →</a>
           <a href="#contact" class="btn btn-ghost">Me contacter</a>
-          <a href="carte/Ma_carte_de_profil.html" target="_blank" class="btn btn-ghost">À propos</a>
+          
         </div>
 
         <div class="hero-stats">
@@ -108,10 +77,11 @@
 
   <!-- ======= PROJETS ======= -->
   <section id="projets">
+    <div class="section-net" id="net-1"><canvas></canvas></div>
     
-    <h2>Réalisations</h2>
+    <h2 class="reveal">Réalisations</h2>
 
-    <div class="filters" role="tablist" aria-label="Filtrer les projets">
+    <div class="filters reveal" role="tablist" aria-label="Filtrer les projets">
       <button class="filter-pill active" data-filter="all">Tous</button>
       <button class="filter-pill" data-filter="web">Web</button>
       <button class="filter-pill" data-filter="form">Formulaire</button>
@@ -126,7 +96,8 @@
         data-tag="Web"
         data-desc="Site web responsive pour présenter mes compétences, projets et parcours professionnel."
         data-details="Conçu de zéro en HTML/CSS/JS, sans framework. Accent mis sur une navigation claire, un design system cohérent (variables CSS, typographie modulaire) et une expérience 100% responsive, du mobile au desktop."
-        data-stack="HTML5,CSS3,JavaScript">
+        data-stack="HTML5,CSS3,JavaScript"
+        data-url="https://jeffdavidagbenyinou.github.io/David-portfolio-/">
         <span class="project-number">01</span>
         <span class="project-tag tag-web">Web</span>
         <h3>Site de portfolio personnel</h3>
@@ -178,8 +149,9 @@
 
   <!-- ======= COMPÉTENCES ======= -->
   <section id="competences">
+    <div class="section-net" id="net-2"><canvas></canvas></div>
     
-    <h2>Mes compétences</h2>
+    <h2 class="reveal">Mes compétences</h2>
 
     <div class="skills-container">
       <div class="skill-row reveal">
@@ -209,7 +181,7 @@
           <span class="skill-sub">Back-end, bases de données</span>
         </div>
         <div class="skill-bar"><div class="skill-fill" data-width="70" style="background: var(--purple);"></div></div>
-        <span class="skill-pct">50%</span>
+        <span class="skill-pct">70%</span>
       </div>
       <div class="skill-row reveal">
         <div class="skill-icon" style="background: var(--red-dim);">🛡️</div>
@@ -247,19 +219,247 @@
           <span class="skill-name">Cisco Packet Tracer</span>
           <span class="skill-sub">Simulation réseau, LAN/WAN</span>
         </div>
-        <div class="skill-bar"><div class="skill-fill" data-width="75" style="background: #a78bfa;"></div></div>
+        <div class="skill-bar"><div class="skill-fill" data-width="90" style="background: #a78bfa;"></div></div>
         <span class="skill-pct">90%</span>
+      </div>
+
+      <div class="skill-row reveal">
+        <div class="skill-icon" style="background: rgba(255, 99, 132, 0.12);">🔒</div>
+        <div class="skill-info">
+          <span class="skill-name">GIT et GitHub</span>
+          <span class="skill-sub">Gestion de version, collaboration</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" data-width="70" style="background: #ff6384;"></div></div>
+        <span class="skill-pct">70%</span>
       </div>
     </div>
   </section>
 
+  <!-- ======= PARCOURS ACADEMIQUE ET PROFESSIONNEL ======= -->
+  <section id="parcours">
+    <div class="section-net" id="net-3"><canvas></canvas></div>
+    <h2 class="reveal">Parcours Professionnel et Académique</h2>
+
+     <div class="timeline"> 
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <!-- <div class="timeline-content exp-clickable" tabindex="0"
+          data-date="2026 — À venir"
+          data-title="Stage d'immersion — Organisation RH"
+          data-role="Développeur · Déploiement de mon projet ATS"
+          data-desc="Stage d'immersion au cours duquel je déploierai mon système ATS (tri automatisé de CV, scoring et retours personnalisés aux candidats) en conditions réelles, au contact direct des équipes RH."
+          data-points="Lecture et extraction automatisée des CV (PDF) avec pdfplumber/pypdf,Scoring des candidatures selon compétences techniques et soft skills,Validation manuelle des cas limites avant envoi des retours,Envoi de retours personnalisés par email via SMTP,Interface HR sous Streamlit pour le suivi des candidatures">
+          <span class="timeline-date">2026 — À venir</span>
+          <h3>Stage d'immersion — Organisation RH</h3>
+          <p class="timeline-role">Développeur · Déploiement de mon projet ATS</p>
+          <p class="timeline-desc">Stage d'immersion au cours duquel je déploierai mon système ATS (tri automatisé de CV, scoring et retours personnalisés aux candidats) en conditions réelles, au contact direct des équipes RH.</p>
+          <span class="timeline-more">Détails <span class="arrow">→</span></span>
+        </div> -->
+      </div> 
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content exp-clickable" tabindex="0"
+          data-date="2025 — 2026"
+          data-title="Formation ASR — ESGIS Lomé"
+          data-role="Premiere année - Administration Systèmes, Réseaux &amp; Sécurité"
+          data-desc="Parcours axé sur l'administration réseau, la sécurité informatique et le développement, complété par un apprentissage autonome en développement web full-stack."
+          data-points="Administration systèmes et réseaux (Cisco Packet Tracer, LAN/VLAN),Fondations en cybersécurité et sécurisation d'infrastructures,Apprentissage autonome du développement web (HTML/CSS/JS),Projets pratiques : gestion scolaire Java, portfolio, ATS">
+          <span class="timeline-date">2025 — 2026</span>
+          <h3>Formation ASR — ESGIS Lomé, TOGO</h3>
+          <p class="timeline-role">Premiere année - Administration Systèmes, Réseaux &amp; Sécurité</p>
+          <p class="timeline-desc">Parcours axé sur l'administration réseau, la sécurité informatique et le développement, complété par un apprentissage autonome en développement web full-stack.</p>
+          <span class="timeline-more">Détails <span class="arrow">→</span></span>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content exp-clickable" tabindex="0"
+          data-date="2024 — 2025"
+          data-title="Baccalauréat Scientifique D — Lycée Ségbé, TOGO"
+          data-role="Baccalauréat Scientifique D — Lycée Ségbé, TOGO"
+          data-desc="Parcours axé sur les Mathématiques,  la Physique, la Chimie et les Sciences de la Vie et de la Terre."
+          data-points="Mathématiques notions des nombres complexes des fonctions - limites et Probabilités - Statistiques,Physique notions des Mécaniques,Chimie notions des réactions chimiques des bases et acides,SVT notions de la génétique la loi de Mendel - reproduction animale et végétale">
+          <span class="timeline-date">2024 — 2025</span>
+          <h3>Baccalauréat Scientifique D — Lycée Ségbé, TOGO</h3>
+          <p class="timeline-role">Baccalauréat Scientifique D</p>
+          <p class="timeline-desc">Parcours axé sur les Mathématiques,  la Physique, la Chimie et les Sciences de la Vie et de la Terre.</p>
+          <span class="timeline-more">Détails <span class="arrow">→</span></span>
+        </div>
+      </div>
+
+       <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content exp-clickable" tabindex="0"
+          data-date="2021 — 2022"
+          data-title=" BEPC — Complexe Scolaire le Fleuron Lomé, TOGO"
+          data-role="BEPC — Complexe Scolaire le Fleuron Lomé, TOGO"
+          data-desc="Parcours axé sur les Mathématiques,  la Physique, la Chimie et les Sciences de la Vie et de la Terre."
+          data-points="Mathématiques ,Physique,Chimie,SVT">
+          <span class="timeline-date">2021 — 2022</span>
+          <h3>Brevet d'Études de Premier Cycle BEPC  — Complexe Scolaire le Fleuron, Lomé, TOGO</h3>
+          <p class="timeline-role">Brevet d'Études de Premier Cycle</p>
+          <p class="timeline-desc">Parcours axé sur les Mathématiques,  la Physique, la Chimie et les Sciences de la Vie et de la Terre.</p>
+          <span class="timeline-more">Détails <span class="arrow">→</span></span>
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
+
+  <!-- ======= ENGAGEMENTS ======= -->
+  <section id="engagements">
+    <div class="section-net" id="net-engagements"><canvas></canvas></div>
+
+    <h2 class="reveal">Clubs, associations &amp; talents</h2>
+    <div class="projects-grid">
+
+      <article class="project-card reveal" tabindex="0"
+        data-title="Club d'Art Oratoire — ESGIS"
+        data-tag="Club"
+        data-desc="Développement de la prise de parole en public, de l'argumentation et de la confiance à l'oral."
+        data-details="Membre actif du club d'art oratoire d'ESGIS. Séances régulières axées sur la structuration du discours, l'improvisation, la gestion du trac et l'argumentation face à un public — des compétences directement utiles en entretien et en présentation de projet."
+        data-stack="Prise de parole,Argumentation,Confiance">
+        <span class="project-number">01</span>
+        <span class="project-tag tag-web">Club</span>
+        <h3>Club d'Art Oratoire</h3>
+        <p>Développement de la prise de parole en public, de l'argumentation et de la confiance à l'oral.</p>
+        <span class="project-more">Détails <span class="arrow">→</span></span>
+      </article>
+
+      <article class="project-card reveal" tabindex="0"
+        data-title="Club de Musique"
+        data-tag="Club"
+        data-desc="Groupe musical avec répétitions régulières le samedi après-midi."
+        data-details="Membre d'un groupe musical au sein duquel je joue du piano lors des répétitions hebdomadaires et de prestations. Une activité qui m'apprend la discipline, le travail d'équipe et l'écoute — des qualités que je retrouve aussi dans le travail en équipe projet."
+        data-stack="Piano,Travail d'équipe,Discipline">
+        <span class="project-number">02</span>
+        <span class="project-tag tag-form">Club</span>
+        <h3>Club de Musique</h3>
+        <p>Groupe musical avec répétitions régulières le samedi après-midi.</p>
+        <span class="project-more">Détails <span class="arrow">→</span></span>
+      </article>
+
+      <article class="project-card reveal" tabindex="0"
+        data-title="PMI — Project Management Institute"
+        data-tag="Certification"
+        data-desc="Chapitre étudiant PMI : formations et certifications en gestion de projet."
+        data-details="Membre du chapitre étudiant du PMI (Project Management Institute). J'y suis des formations et certifications en ligne sur la gestion de projet — méthodologies, cycle de vie projet, outils de pilotage — en complément direct de mes compétences techniques."
+        data-stack="Gestion de projet,Méthodologies,Certification">
+        <span class="project-number">03</span>
+        <span class="project-tag tag-network">Certification</span>
+        <h3>PMI — Project Management Institute</h3>
+        <p>Chapitre étudiant PMI : formations et certifications en gestion de projet.</p>
+        <span class="project-more">Détails <span class="arrow">→</span></span>
+      </article>
+
+      <article class="project-card reveal" tabindex="0"
+        data-title="Pianiste"
+        data-tag="Talent"
+        data-desc="Je joue du piano au sein d'un groupe musical, à l'oreille comme en lecture."
+        data-details="Je pratique le piano depuis plusieurs années, au sein d'un groupe musical avec lequel je répète et je joue régulièrement. La musique m'apprend la rigueur, la précision et l'écoute — des réflexes que je retrouve dans le code : structure, patience, et attention aux détails."
+        data-stack="Piano,Oreille musicale,Répétitions">
+        <span class="project-number">04</span>
+        <span class="project-tag tag-blog">Talent</span>
+        <h3>Pianiste</h3>
+        <p>Je joue du piano au sein d'un groupe musical, à l'oreille comme en lecture.</p>
+        <span class="project-more">Détails <span class="arrow">→</span></span>
+      </article>
+
+      <article class="project-card reveal" tabindex="0"
+        data-title="Technicien Son"
+        data-tag="Talent"
+        data-desc="J'interviens comme technicien de son lors de certaines prestations."
+        data-details="En complément de mon rôle de pianiste, j'assure aussi la régie son lors de certaines prestations : réglages de sonorisation, gestion des niveaux, équilibrage des instruments et des voix pour un rendu propre en direct."
+        data-stack="Sonorisation,Régie live,Mixage">
+        <span class="project-number">05</span>
+        <span class="project-tag tag-web">Talent</span>
+        <h3>Technicien Son</h3>
+        <p>J'interviens comme technicien de son lors de certaines prestations.</p>
+        <span class="project-more">Détails <span class="arrow">→</span></span>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ======= EXPÉRIENCE ======= -->
+  <section id="experience">
+    <div class="section-net" id="net-3"><canvas></canvas></div>
+    <h2 class="reveal">Expérience</h2> 
+
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content exp-clickable" tabindex="0"
+          data-date=" Mai - Juin 2026 "
+          data-title="Projets de Gestion d'Etudiants Java POO"
+          data-role="Développeur Java · Gestion d'étudiants"
+          data-desc="Développement d'une application Java orientée objet pour la gestion des étudiants, incluant l'ajout, la modification et la suppression de profils étudiants."
+          data-points="Conception orientée objet (POO) avec classes et objets,Implémentation de fonctionnalités CRUD (Create, Read, Update, Delete),Gestion des données en mémoire avec structures de données appropriées,Interface console simple pour l'interaction utilisateur">
+          <span class="timeline-date">Mai - Juin 2026</span>
+          <h3>Projets de Gestion d'Etudiants Java POO</h3>
+          <p class="timeline-role">Développeur Java · Gestion d'étudiants</p>
+          <p class="timeline-desc">Développement d'une application Java orientée objet pour la gestion des étudiants, incluant l'ajout, la modification et la suppression de profils étudiants.</p>
+          <span class="timeline-more">Détails <span class="arrow">→</span></span>
+        </div>
+       </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content exp-clickable" tabindex="0"
+          data-date="Avril 2026"
+          data-title="Projet de Configuration du Réseau d'une Entreprise"
+          data-role="Administrateur Réseau · Simulation Cisco Packet Tracer"
+          data-desc="Configuration et gestion d'un réseau d'entreprise à l'aide de Cisco Packet Tracer, incluant la mise en place de réseaux locaux (LAN) et de réseaux virtuels (VLAN), du routage inter- VLAN des protocoles RIP &amp; OSPF et de la sécurisation des accès."
+          data-points="Configuration de réseaux locaux (LAN) et virtuels (VLAN),Routage inter-VLAN avec RIP &amp; OSPF,Sécurisation des accès réseau">
+          <span class="timeline-date">Avril 2026</span>
+          <h3>Projet de Configuration du Réseau d'une Entreprise</h3>
+          <p class="timeline-role">Administrateur Réseau · Simulation Cisco Packet Tracer</p>
+          <p class="timeline-desc">Configuration et gestion d'un réseau d'entreprise à l'aide de Cisco Packet Tracer, incluant la mise en place de réseaux locaux (LAN) et de réseaux virtuels (VLAN), du routage inter- VLAN des protocoles RIP &amp; OSPF et de la sécurisation des accès.</p>
+          <span class="timeline-more">Détails <span class="arrow">→</span></span>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content exp-clickable" tabindex="0"
+          data-date="Décembre 2025"
+          data-title="Exposé de groupe sur l'importance des Mathématiques dans l'informatique"
+          data-role="Mathématiques · Arduino · IoT"
+          data-desc="Projet incluant arduino pour démontrer l'importance des Mathématiques dans l'algorithmique."
+          data-points="Mathématiques notions Matrices et Algèbre Linéaire, IoT et Arduino, algorithmique et logique de programmation,Présentation orale et démonstration pratique">
+          <span class="timeline-date">Décembre 2025</span>
+          <h3>Exposé de groupe sur l'importance des Mathématiques dans l'informatique</h3>
+          <p class="timeline-role">Mathématiques · Arduino · IoT</p>
+          <p class="timeline-desc">Projet incluant arduino pour démontrer l'importance des Mathématiques dans l'algorithmique.</p>
+          <span class="timeline-more">Détails <span class="arrow">→</span></span>
+        </div>
+      </div>
+
+       
+      </div>
+
+
+
+    
+  </section>
+
   <!-- ======= CONTACT ======= -->
   <section id="contact">
+    <div class="section-net" id="net-4"><canvas></canvas></div>
     
-    <h2>Contactez-moi</h2>
+    <h2 class="reveal">Contactez-moi</h2>
 
     <div class="contact-layout">
       <div class="contact-grid">
+        <div class="avail-card reveal" id="availCard">
+          <span class="avail-dot"><span></span>DISPONIBLE POUR STAGE</span>
+          <p>Je réponds généralement sous 24h. N'hésite pas à me contacter directement par téléphone si c'est urgent.</p>
+        </div>
         <a href="tel:+22897612445" class="contact-link reveal">
           <div class="contact-icon" style="background: var(--cyan-dim);">📞</div>
           <div>
@@ -315,9 +515,9 @@
 
 </main>
 
-<footer>
+<footer class="reveal">
   <p>&copy; 2026 David Jefferson AGBENYINOU <span class="footer-dot">·</span> Tous droits réservés</p>
-  <p class="footer-mono">SRI Student · Sysadmin &amp; Web Developer · Lomé, TG</p>
+  <p class="footer-mono">ASR Student · Sysadmin &amp; Web Developer · Lomé, TG</p>
 </footer>
 
 <!-- ======= MODALE PROJET ======= -->
@@ -328,6 +528,34 @@
     <h3 id="modalTitle"></h3>
     <p id="modalDesc"></p>
     <div class="modal-stack" id="modalStack"></div>
+  </div>
+</div>
+
+<!-- ======= MODALE EXPÉRIENCE ======= -->
+<div class="modal-overlay" id="expModalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="expModalTitle">
+    <button class="modal-close" id="expModalClose" aria-label="Fermer">✕</button>
+    <span class="timeline-date" id="expModalDate"></span>
+    <h3 id="expModalTitle"></h3>
+    <p class="timeline-role" id="expModalRole"></p>
+    <p id="expModalDesc"></p>
+    <ul class="modal-points" id="expModalPoints"></ul>
+  </div>
+</div>
+
+<!-- ======= MODALE À PROPOS ======= -->
+<div class="modal-overlay" id="aboutModalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="aboutModalTitle">
+    <button class="modal-close" id="aboutModalClose" aria-label="Fermer">✕</button>
+    <h3 id="aboutModalTitle">À propos de moi</h3>
+    <p>
+      <!-- Remplace ce texte par ta propre présentation : qui tu es, ce que tu fais,
+           ce qui te motive, ton parcours en résumé, tes objectifs, etc. -->
+      Je m'appelle David Jefferson AGBENYINOU, étudiant en 1<sup>ère</sup> année ASR (Administration Systèmes, Réseaux &amp; Sécurité Informatique) à ESGIS, Lomé.
+    </p>
+    <p style="margin-top: 1rem;">
+      Curieux et rigoureux, je m'intéresse autant à l'administration réseau qu'au développement web — deux facettes complémentaires du même métier : faire fonctionner et tenir les systèmes ensemble, proprement. En dehors des cours, j'apprends en autonomie le développement full-stack et je participe à des compétitions tech comme le TCR26 avec l'équipe IdroTech.
+    </p>
   </div>
 </div>
 
