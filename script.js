@@ -350,4 +350,65 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.section-net').forEach(initParticleNet);
 
+  /* ---------- 11. MUSIQUE DE FOND (playlist avec enchaînement auto) ---------- */
+  const bgAudio = document.getElementById('bgAudio');
+  const musicToggle = document.getElementById('musicToggle');
+  const musicTrackName = document.getElementById('musicTrackName');
+
+  if (bgAudio && musicToggle) {
+    const playlist = [
+      { src: 'forever-young.mp3', name: 'Forever Young' },
+      { src: 'inspiring-emotional.mp3', name: 'Inspiring Emotional Piano' },
+    ];
+    let trackIndex = 0;
+    let userMuted = false;
+
+    bgAudio.volume = 0.35;
+
+    function loadTrack(index) {
+      bgAudio.src = playlist[index].src;
+      if (musicTrackName) musicTrackName.textContent = playlist[index].name;
+    }
+
+    function playNextTrack() {
+      trackIndex = (trackIndex + 1) % playlist.length;
+      loadTrack(trackIndex);
+      bgAudio.play().catch(() => {});
+    }
+
+    bgAudio.addEventListener('ended', playNextTrack);
+
+    function tryAutoplay() {
+      loadTrack(trackIndex);
+      bgAudio.play().then(() => {
+        musicToggle.setAttribute('aria-pressed', 'true');
+      }).catch(() => {
+        // Lecture automatique bloquée par le navigateur : on attend une interaction utilisateur
+        musicToggle.setAttribute('aria-pressed', 'false');
+        const startOnFirstInteraction = () => {
+          if (!userMuted) {
+            bgAudio.play().then(() => musicToggle.setAttribute('aria-pressed', 'true')).catch(() => {});
+          }
+          document.removeEventListener('click', startOnFirstInteraction);
+          document.removeEventListener('scroll', startOnFirstInteraction);
+        };
+        document.addEventListener('click', startOnFirstInteraction, { once: true });
+        document.addEventListener('scroll', startOnFirstInteraction, { once: true });
+      });
+    }
+
+    musicToggle.addEventListener('click', () => {
+      if (bgAudio.paused) {
+        userMuted = false;
+        bgAudio.play().then(() => musicToggle.setAttribute('aria-pressed', 'true')).catch(() => {});
+      } else {
+        userMuted = true;
+        bgAudio.pause();
+        musicToggle.setAttribute('aria-pressed', 'false');
+      }
+    });
+
+    tryAutoplay();
+  }
+
 });

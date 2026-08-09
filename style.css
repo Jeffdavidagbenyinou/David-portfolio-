@@ -199,7 +199,7 @@ a { color: inherit; }
   box-shadow: 0 8px 18px rgba(0,0,0,0.24);
   outline: none;
 }
-.hero-desc-card:hover .timeline-more { color: var(--cyan); gap: 8px; }
+.hero-desc-card:hover .timeline-more { background: rgba(79,209,255,0.22); gap: 9px; }
 .hero-desc {
   font-size: 15.5px; color: var(--text-muted);
   line-height: 1.75;
@@ -380,8 +380,18 @@ section h2 {
 .project-card h3 { font-family: var(--font-display); font-size: 15.5px; font-weight: 700; margin-bottom: .5rem; line-height: 1.3; }
 .project-card p { font-size: 13.5px; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem; }
 .project-number { display: block; font-family: var(--font-mono); font-size: 11px; color: var(--text-dim); margin-bottom: .75rem; font-weight: 600; }
-.project-more { font-size: 12.5px; color: var(--text-dim); font-family: var(--font-mono); display: inline-flex; align-items: center; gap: 4px; transition: color .2s, gap .2s; }
-.project-card:hover .project-more { color: var(--cyan); gap: 8px; }
+.project-more {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-family: var(--font-mono); font-weight: 600;
+  color: var(--cyan);
+  background: var(--cyan-dim);
+  border: 1px solid var(--cyan-border);
+  border-radius: 20px;
+  padding: 5px 12px;
+  margin-top: .85rem;
+  transition: background .2s ease, gap .2s ease;
+}
+.project-card:hover .project-more { background: rgba(79,209,255,0.22); gap: 9px; }
 
 /* ─── MODAL ─── */
 .modal-overlay {
@@ -482,12 +492,17 @@ section h2 {
   outline: none;
 }
 .timeline-more {
-  font-size: 12.5px; color: var(--text-dim); font-family: var(--font-mono);
-  display: inline-flex; align-items: center; gap: 4px;
-  margin-top: .5rem;
-  transition: color .2s, gap .2s;
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-family: var(--font-mono); font-weight: 600;
+  color: var(--cyan);
+  background: var(--cyan-dim);
+  border: 1px solid var(--cyan-border);
+  border-radius: 20px;
+  padding: 5px 12px;
+  margin-top: .85rem;
+  transition: background .2s ease, gap .2s ease;
 }
-.exp-clickable:hover .timeline-more { color: var(--cyan); gap: 8px; }
+.exp-clickable:hover .timeline-more { background: rgba(79,209,255,0.22); gap: 9px; }
 .timeline-date {
   font-family: var(--font-mono); font-size: 11.5px;
   color: var(--cyan); letter-spacing: 0.4px;
@@ -632,6 +647,47 @@ footer p { font-size: 13px; color: var(--text-dim); }
   .hero h1 { font-size: clamp(2rem, 8vw, 3rem); }
   .hero-stats { gap: 1.25rem; }
   .projects-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── MUSIQUE DE FOND (barre inline dans le hero) ─── */
+.music-bar {
+  max-width: 480px;
+  margin-bottom: 1.75rem;
+  animation: fadeUp .6s .25s ease both;
+}
+.music-invite {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  margin-bottom: .6rem;
+  line-height: 1.6;
+}
+.music-bar-controls {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+}
+.music-play-btn {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: var(--cyan-dim);
+  border: 1px solid var(--cyan-border);
+  color: var(--cyan);
+  font-size: 13px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: background .2s;
+}
+.music-play-btn:hover { background: rgba(79,209,255,0.2); }
+.music-icon-off { display: none; }
+.music-play-btn[aria-pressed="false"] .music-icon-on { display: none; }
+.music-play-btn[aria-pressed="false"] .music-icon-off { display: inline; }
+.music-track-name {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-dim);
 }
 
 @media (prefers-reduced-motion: reduce) {
