@@ -87,14 +87,65 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalTag = document.getElementById('modalTag');
   const modalDesc = document.getElementById('modalDesc');
   const modalStack = document.getElementById('modalStack');
+  const modalGallery = document.getElementById('modalGallery');
+  const galleryImg = document.getElementById('galleryImg');
+  const galleryPrev = document.getElementById('galleryPrev');
+  const galleryNext = document.getElementById('galleryNext');
+  const galleryDots = document.getElementById('galleryDots');
 
-  const tagClassMap = { Web: 'tag-web', Formulaire: 'tag-form', Réseau: 'tag-network', Blog: 'tag-blog', Club: 'tag-form', Certification: 'tag-network', Talent: 'tag-blog' };
+  let galleryImages = [];
+  let galleryIndex = 0;
+
+  function renderGallerySlide() {
+    if (!galleryImages.length) return;
+    galleryImg.src = galleryImages[galleryIndex];
+    galleryDots.querySelectorAll('span').forEach((dot, i) => {
+      dot.classList.toggle('active', i === galleryIndex);
+    });
+  }
+
+  galleryPrev.addEventListener('click', () => {
+    galleryIndex = (galleryIndex - 1 + galleryImages.length) % galleryImages.length;
+    renderGallerySlide();
+  });
+  galleryNext.addEventListener('click', () => {
+    galleryIndex = (galleryIndex + 1) % galleryImages.length;
+    renderGallerySlide();
+  });
+
+  const tagClassMap = { Web: 'tag-web', Formulaire: 'tag-form', Réseau: 'tag-network', Blog: 'tag-blog', Club: 'tag-form', Certification: 'tag-network', Talent: 'tag-blog', Application: 'tag-blog' };
 
   function openModal(card) {
     modalTitle.textContent = card.dataset.title;
     modalDesc.textContent = card.dataset.details || card.dataset.desc;
     modalTag.textContent = card.dataset.tag;
     modalTag.className = 'project-tag ' + (tagClassMap[card.dataset.tag] || '');
+
+    galleryImages = [];
+    if (card.dataset.image) galleryImages.push(card.dataset.image);
+    if (card.dataset.gallery) {
+      card.dataset.gallery.split(',').forEach(src => {
+        if (src.trim()) galleryImages.push(src.trim());
+      });
+    }
+    galleryIndex = 0;
+
+    if (galleryImages.length) {
+      modalGallery.classList.remove('empty');
+      galleryImg.alt = card.dataset.title || 'Aperçu du projet';
+      galleryDots.innerHTML = '';
+      galleryImages.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.addEventListener('click', () => { galleryIndex = i; renderGallerySlide(); });
+        galleryDots.appendChild(dot);
+      });
+      const showNav = galleryImages.length > 1;
+      galleryPrev.style.display = showNav ? 'flex' : 'none';
+      galleryNext.style.display = showNav ? 'flex' : 'none';
+      renderGallerySlide();
+    } else {
+      modalGallery.classList.add('empty');
+    }
 
     modalStack.innerHTML = '';
     (card.dataset.stack || '').split(',').forEach(item => {

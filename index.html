@@ -43,12 +43,10 @@
       <div class="hero-text">
         <h1>David Jefferson<br><span class="highlight">AGBENYINOU</span></h1>
         <div class="hero-desc-card exp-clickable-about" id="aboutTrigger" tabindex="0">
-          <p class="hero-desc">Étudiant 1<sup>ère</sup> année en Administration Systèmes, Réseaux &amp; Sécurité Informatique (ASR) à ESGIS, Lomé. </p>
+          <p class="hero-desc">Étudiant 1<sup>ère</sup> année en Administration Systèmes, Réseaux &amp; Sécurité Informatique (ASR) à ESGIS, Lomé.</p>
           <span class="timeline-more">En savoir plus <span class="arrow">→</span></span>
         </div>
 
-
-        
         <div class="music-bar">
           <p class="music-invite">Pourquoi ne pas écouter cette musique en scrollant sur mon portfolio ?</p>
           <div class="music-bar-controls">
@@ -100,61 +98,81 @@
       <button class="filter-pill" data-filter="web">Web</button>
       <button class="filter-pill" data-filter="form">Formulaire</button>
       <button class="filter-pill" data-filter="network">Réseau</button>
-      <button class="filter-pill" data-filter="blog">Blog</button>
+      <button class="filter-pill" data-filter="app">App</button>
     </div>
 
     <div class="projects-grid" id="projectsGrid">
 
       <article class="project-card reveal" data-category="web" tabindex="0"
         data-title="Site de portfolio personnel"
-        data-tag="Web"
         data-desc="Site web responsive pour présenter mes compétences, projets et parcours professionnel."
-        data-details="Conçu de zéro en HTML/CSS/JS, sans framework. Accent mis sur une navigation claire, un design system cohérent (variables CSS, typographie modulaire) et une expérience 100% responsive, du mobile au desktop."
+        data-image="portfolio.png"
         data-stack="HTML5,CSS3,JavaScript"
         data-url="https://jeffdavidagbenyinou.github.io/David-portfolio-/">
-        <span class="project-number">01</span>
-        <span class="project-tag tag-web">Web</span>
+        <div class="project-image">
+          <img src="photo.png" alt="Site de portfolio personnel" loading="lazy">
+        </div>
         <h3>Site de portfolio personnel</h3>
         <p>Site web responsive pour présenter mes compétences, projets et parcours professionnel.</p>
         <span class="project-more">Détails <span class="arrow">→</span></span>
       </article>
 
-      <article class="project-card reveal" data-category="form" tabindex="0"
-        data-title="Réservation d'hôtel en ligne"
-        data-tag="Formulaire"
+      <article class="project-card reveal" data-category="form" tabindex="0" 
         data-desc="Formulaire de réservation en ligne complet pour un établissement hôtelier."
         data-details="Parcours de réservation pensé pour minimiser la friction : sélection de dates, type de chambre, validation en temps réel des champs et retours visuels clairs à chaque étape."
-        data-stack="HTML5,CSS3,JavaScript">
-        <span class="project-number">02</span>
-        <span class="project-tag tag-form">Formulaire</span>
-        <h3>Réservation d'hôtel en ligne</h3>
+        data-stack="HTML5,CSS3,JavaScript,Formulaire multi-étapes,Validation en temps réel"
+        data-image="Réservation_hôtel.png"
+        data-gallery="Réservation_hôtel_.png">
+        <div class="project-image">
+          <img src="Réservation_hôtel.png" alt="Réservation d'hôtel en ligne" loading="lazy">
+        </div>
+        <h3>Réservation d'hôtel en ligne</h3> 
         <p>Formulaire de réservation en ligne complet pour un établissement hôtelier.</p>
         <span class="project-more">Détails <span class="arrow">→</span></span>
       </article>
 
       <article class="project-card reveal" data-category="network" tabindex="0"
-        data-title="Config. Cisco Packet Tracer"
-        data-tag="Réseau"
-        data-desc="Simulation de réseau local (LAN) avec configuration de routeurs et switchs sous Cisco."
-        data-details="Topologie LAN complète : adressage IP, VLANs, configuration des routeurs et switchs, tests de connectivité. Un exercice direct de mon cursus ASR, orienté administration réseau concrète."
-        data-stack="Cisco Packet Tracer,Routage,VLAN">
-        <span class="project-number">03</span>
-        <span class="project-tag tag-network">Réseau</span>
-        <h3>Config. Cisco Packet Tracer</h3>
-        <p>Simulation de réseau local (LAN) avec configuration de routeurs et switchs sous Cisco.</p>
+        data-title="Configuration réseau d'entreprise"
+        data-desc="Projet de configuration réseau d'entreprise avec Cisco Packet Tracer : LAN, VLAN, routage inter-VLAN et sécurisation des accès."
+        data-details="Simulation complète d'un réseau d'entreprise avec Cisco Packet Tracer. Configuration de réseaux locaux (LAN) et virtuels (VLAN), routage inter-VLAN avec les protocoles RIP et OSPF, et sécurisation des accès pour garantir la confidentialité et l'intégrité des données."
+        data-stack="Cisco Packet Tracer,Réseaux LAN/VLAN,Routage RIP/OSPF,Sécurisation des accès"
+        data-image="image_exposé_réseaux.png"
+        data-gallery="image_exposé_réseaux_.png,">
+        <div class="project-image">
+          <img src="image_exposé_réseaux.png" alt="Configuration réseau d'entreprise" loading="lazy">
+        </div>
+        <h3>Configuration réseau d'entreprise</h3>
+        <p>Projet de configuration réseau d'entreprise avec Cisco Packet Tracer.</p>
         <span class="project-more">Détails <span class="arrow">→</span></span>
       </article>
 
-      <article class="project-card reveal" data-category="blog" tabindex="0"
-        data-title="Blog développement web"
-        data-tag="Blog"
-        data-desc="Articles, tutoriels et ressources sur le développement web et les technologies émergentes."
-        data-details="Espace éditorial pour documenter ce que j'apprends : notes de cours transformées en tutoriels, retours d'expérience sur mes projets et veille sur les technologies web."
-        data-stack="HTML5,CSS3,Contenu éditorial">
-        <span class="project-number">04</span>
-        <span class="project-tag tag-blog">Blog</span>
-        <h3>Blog développement web</h3>
-        <p>Articles, tutoriels et ressources sur le développement web et les technologies émergentes.</p>
+
+      <article class="project-card reveal" data-category="app" tabindex="0"
+        data-title="Gestion École"
+        data-desc="Application desktop complète de gestion scolaire développée en Java avec interface Swing et base de données MySQL."
+        data-details="Application desktop complète de gestion scolaire développée en Java avec interface Swing et base de données MySQL. Système de connexion avec deux rôles (Administrateur / Utilisateur), gestion des élèves, classes, enseignants, matières et notes, avec export PDF."
+        data-stack="Java,Swing,MySQL,NetBeans"
+        data-image="gestion-ecole-connexion.jpeg"
+        data-gallery="gestion-ecole-admin.jpeg,gestion-ecole-consultation.jpeg">
+        <div class="project-image">
+          <img src="gestion-ecole-connexion.jpeg" alt="Application Gestion École - vue administrateur" loading="lazy">
+        </div>
+        <h3>Gestion École</h3>
+        <p>Application desktop complète de gestion scolaire développée en Java avec interface Swing et base de données MySQL.</p>
+        <span class="project-more">Détails <span class="arrow">→</span></span>
+      </article>
+
+      <article class="project-card reveal" data-category="form" tabindex="0" 
+        data-desc="Formulaire de réservation en ligne complet pour un établissement hôtelier."
+        data-details="Parcours de réservation pensé pour minimiser la friction : sélection de dates, type de chambre, validation en temps réel des champs et retours visuels clairs à chaque étape."
+        data-stack="HTML5,CSS3,JavaScript,Formulaire multi-étapes,Validation en temps réel"
+        data-image="Page_de_connexion.png"
+        data-gallery="Page_de_connexion_.png">
+        <div class="project-image"> 
+          <img src="Page_de_connexion.png" alt="Page de connexion" loading="lazy">
+        </div>
+        <h3>Page de connexion </h3> 
+        <p>Page de </p>
         <span class="project-more">Détails <span class="arrow">→</span></span>
       </article>
 
@@ -275,13 +293,13 @@
         <div class="timeline-dot"></div>
         <div class="timeline-content exp-clickable" tabindex="0"
           data-date="2025 — 2026"
-          data-title="Formation ASR à ESGIS Lomé"
-          data-role="Premiere année d'Administration Systèmes, Réseaux &amp; Sécurité"
+          data-title="Formation ASR — ESGIS Lomé"
+          data-role="Première année, Administration Systèmes, Réseaux &amp; Sécurité"
           data-desc="Parcours axé sur l'administration réseau, la sécurité informatique et le développement, complété par un apprentissage autonome en développement web full-stack."
           data-points="Administration systèmes et réseaux (Cisco Packet Tracer, LAN/VLAN),Fondations en cybersécurité et sécurisation d'infrastructures,Apprentissage autonome du développement web (HTML/CSS/JS),Projets pratiques : gestion scolaire Java, portfolio, ATS">
           <span class="timeline-date">2025 — 2026</span>
-          <h3>Formation ASR à ESGIS Lomé, TOGO</h3>
-          <p class="timeline-role">Premiere année d'Administration Systèmes, Réseaux &amp; Sécurité</p>
+          <h3>Formation ASR — ESGIS Lomé, TOGO</h3>
+          <p class="timeline-role">Première année, Administration Systèmes, Réseaux &amp; Sécurité</p>
           <p class="timeline-desc">Parcours axé sur l'administration réseau, la sécurité informatique et le développement, complété par un apprentissage autonome en développement web full-stack.</p>
           <span class="timeline-more">Détails <span class="arrow">→</span></span>
         </div>
@@ -291,12 +309,12 @@
         <div class="timeline-dot"></div>
         <div class="timeline-content exp-clickable" tabindex="0"
           data-date="2024 — 2025"
-          data-title="Baccalauréat Scientifique D au Lycée Ségbé, TOGO"
-          data-role="Baccalauréat Scientifique D au Lycée Ségbé, TOGO"
+          data-title="Baccalauréat Scientifique D — Lycée Ségbé, TOGO"
+          data-role="Baccalauréat Scientifique D — Lycée Ségbé, TOGO"
           data-desc="Parcours axé sur les Mathématiques,  la Physique, la Chimie et les Sciences de la Vie et de la Terre."
-          data-points="Mathématiques notions des nombres complexes des fonctions - limites et Probabilités - Statistiques,Physique notions des Mécaniques,Chimie notions des réactions chimiques des bases et acides,SVT notions de la génétique la loi de Mendel - reproduction animale et végétale">
+          data-points="Mathématiques, nombres complexes, fonctions, limites et probabilités-statistiques,Physique, notions de mécanique,Chimie, notions de réactions chimiques, acides et bases,SVT, notions de génétique, loi de Mendel, reproduction animale et végétale">
           <span class="timeline-date">2024 — 2025</span>
-          <h3>Baccalauréat Scientifique D au Lycée Ségbé, TOGO</h3>
+          <h3>Baccalauréat Scientifique D — Lycée Ségbé, TOGO</h3>
           <p class="timeline-role">Baccalauréat Scientifique D</p>
           <p class="timeline-desc">Parcours axé sur les Mathématiques,  la Physique, la Chimie et les Sciences de la Vie et de la Terre.</p>
           <span class="timeline-more">Détails <span class="arrow">→</span></span>
@@ -307,12 +325,12 @@
         <div class="timeline-dot"></div>
         <div class="timeline-content exp-clickable" tabindex="0"
           data-date="2021 — 2022"
-          data-title=" BEPC au Complexe Scolaire le Fleuron Lomé, TOGO"
-          data-role="BEPC au Complexe Scolaire le Fleuron Lomé, TOGO"
+          data-title=" BEPC — Complexe Scolaire le Fleuron Lomé, TOGO"
+          data-role="BEPC — Complexe Scolaire le Fleuron Lomé, TOGO"
           data-desc="Parcours axé sur les Mathématiques,  la Physique, la Chimie et les Sciences de la Vie et de la Terre."
           data-points="Mathématiques ,Physique,Chimie,SVT">
           <span class="timeline-date">2021 — 2022</span>
-          <h3>Brevet d'Études de Premier Cycle BEPC au Complexe Scolaire le Fleuron, Lomé, TOGO</h3>
+          <h3>Brevet d'Études de Premier Cycle BEPC  — Complexe Scolaire le Fleuron, Lomé, TOGO</h3>
           <p class="timeline-role">Brevet d'Études de Premier Cycle</p>
           <p class="timeline-desc">Parcours axé sur les Mathématiques,  la Physique, la Chimie et les Sciences de la Vie et de la Terre.</p>
           <span class="timeline-more">Détails <span class="arrow">→</span></span>
@@ -332,14 +350,14 @@
     <div class="projects-grid">
 
       <article class="project-card reveal" tabindex="0"
-        data-title="Club d'Art Oratoire d'ESGIS"
+        data-title="Club d'Art Oratoire — ESGIS"
         data-tag="Club"
         data-desc="Développement de la prise de parole en public, de l'argumentation et de la confiance à l'oral."
-        data-details="Membre actif du club d'art oratoire d'ESGIS. Séances régulières axées sur la structuration du discours, l'improvisation, la gestion du trac et l'argumentation face à un public, des compétences directement utiles en entretien et en présentation de projet."
+        data-details="Membre actif du club d'art oratoire d'ESGIS. Séances régulières axées sur la structuration du discours, l'improvisation, la gestion du trac et l'argumentation face à un public — des compétences directement utiles en entretien et en présentation de projet."
         data-stack="Prise de parole,Argumentation,Confiance">
         <span class="project-number">01</span>
         <span class="project-tag tag-web">Club</span>
-        <h3>Club d'Art Oratoire d'ESGIS</h3>
+        <h3>Club d'Art Oratoire</h3>
         <p>Développement de la prise de parole en public, de l'argumentation et de la confiance à l'oral.</p>
         <span class="project-more">Détails <span class="arrow">→</span></span>
       </article>
@@ -348,12 +366,12 @@
         data-title="Club de Musique"
         data-tag="Club"
         data-desc="Groupe musical avec répétitions régulières le samedi après-midi."
-        data-details="Membre d'un groupe musical au sein duquel je joue du piano lors des répétitions hebdomadaires et de prestations. Une activité qui m'apprend la discipline, le travail d'équipe et l'écoute, des qualités que je retrouve aussi dans le travail en équipe projet."
+        data-details="Membre d'un groupe musical au sein duquel je joue du piano lors des répétitions hebdomadaires et de prestations. Une activité qui m'apprend la discipline, le travail d'équipe et l'écoute — des qualités que je retrouve aussi dans le travail en équipe projet."
         data-stack="Piano,Travail d'équipe,Discipline">
         <span class="project-number">02</span>
         <span class="project-tag tag-form">Club</span>
-        <h3>Club de Musique d'ESGIS</h3>
-        <p>Groupe musical avec répétitions régulières le mercredi après-midi.</p>
+        <h3>Club de Musique</h3>
+        <p>Groupe musical avec répétitions régulières le samedi après-midi.</p>
         <span class="project-more">Détails <span class="arrow">→</span></span>
       </article>
 
@@ -361,23 +379,25 @@
         data-title="PMI — Project Management Institute"
         data-tag="Certification"
         data-desc="Chapitre étudiant PMI : formations et certifications en gestion de projet."
-        data-details="Membre du chapitre étudiant du PMI (Project Management Institute). J'y suis des formations et certifications en ligne sur la gestion de projet et méthodologies, cycle de vie projet, outils de pilotage. Ce qui est en complément direct de mes compétences techniques."
+        data-details="Membre du chapitre étudiant du PMI (Project Management Institute). J'y suis des formations et certifications en ligne sur la gestion de projet — méthodologies, cycle de vie projet, outils de pilotage — en complément direct de mes compétences techniques."
         data-stack="Gestion de projet,Méthodologies,Certification">
         <span class="project-number">03</span>
         <span class="project-tag tag-network">Certification</span>
-        <h3>Club PMI ESGIS</h3>
+        <h3>PMI — Project Management Institute</h3>
         <p>Chapitre étudiant PMI : formations et certifications en gestion de projet.</p>
         <span class="project-more">Détails <span class="arrow">→</span></span>
-      </article> 
+      </article>
 
       <article class="project-card reveal" tabindex="0"
         data-title="Pianiste"
-        data-tag="Talent"
+        
         data-desc="Je joue du piano au sein d'un groupe musical, à l'oreille comme en lecture."
-        data-details="Je pratique le piano depuis plusieurs années, au sein d'un groupe musical avec lequel je répète et je joue régulièrement. La musique m'apprend la rigueur, la précision et l'écoute des réflexes que je retrouve dans le code : structure, patience, et attention aux détails."
+        data-image="key's.jpeg"
+        data-gallery="David_piano.jpeg,Jeff_piano.jpeg"
         data-stack="Piano,Oreille musicale,Répétitions">
-        <span class="project-number">04</span>
-        <span class="project-tag tag-blog">Talent</span>
+        <div class="project-image">
+          <img src="key's.jpeg" alt="Pianiste" loading="lazy">
+        </div>
         <h3>Pianiste</h3>
         <p>Je joue du piano au sein d'un groupe musical, à l'oreille comme en lecture.</p>
         <span class="project-more">Détails <span class="arrow">→</span></span>
@@ -385,12 +405,14 @@
 
       <article class="project-card reveal" tabindex="0"
         data-title="Technicien Son"
-        data-tag="Talent"
+        
         data-desc="J'interviens comme technicien de son lors de certaines prestations."
-        data-details="En complément de mon rôle de pianiste, j'assure aussi la régie son lors de certaines prestations : réglages de sonorisation, gestion des niveaux, équilibrage des instruments et des voix pour un rendu propre en direct."
+        data-image="key's.jpeg"
+        data-gallery="key's.jpeg"
         data-stack="Sonorisation,Régie live,Mixage">
-        <span class="project-number">05</span>
-        <span class="project-tag tag-web">Talent</span>
+         <div class="project-image">
+          <img src="key's.jpeg" alt="Technicien Son" loading="lazy">
+        </div>
         <h3>Technicien Son</h3>
         <p>J'interviens comme technicien de son lors de certaines prestations.</p>
         <span class="project-more">Détails <span class="arrow">→</span></span>
@@ -409,12 +431,12 @@
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
         <div class="timeline-content exp-clickable" tabindex="0"
-          data-date=" Mai - Juin 2026 "
+          data-date="Mai — Juin 2026"
           data-title="Projets de Gestion d'Etudiants Java POO"
           data-role="Développeur Java · Gestion d'étudiants"
           data-desc="Développement d'une application Java orientée objet pour la gestion des étudiants, incluant l'ajout, la modification et la suppression de profils étudiants."
           data-points="Conception orientée objet (POO) avec classes et objets,Implémentation de fonctionnalités CRUD (Create, Read, Update, Delete),Gestion des données en mémoire avec structures de données appropriées,Interface console simple pour l'interaction utilisateur">
-          <span class="timeline-date">Mai - Juin 2026</span>
+          <span class="timeline-date">Mai — Juin 2026</span>
           <h3>Projets de Gestion d'Etudiants Java POO</h3>
           <p class="timeline-role">Développeur Java · Gestion d'étudiants</p>
           <p class="timeline-desc">Développement d'une application Java orientée objet pour la gestion des étudiants, incluant l'ajout, la modification et la suppression de profils étudiants.</p>
@@ -536,8 +558,14 @@
 
 <!-- ======= MODALE PROJET ======= -->
 <div class="modal-overlay" id="modalOverlay">
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal modal-wide" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <button class="modal-close" id="modalClose" aria-label="Fermer">✕</button>
+    <div class="modal-gallery" id="modalGallery">
+      <button class="gallery-arrow gallery-prev" id="galleryPrev" aria-label="Image précédente">‹</button>
+      <img class="gallery-img" id="galleryImg" alt="">
+      <button class="gallery-arrow gallery-next" id="galleryNext" aria-label="Image suivante">›</button>
+      <div class="gallery-dots" id="galleryDots"></div>
+    </div>
     <span class="project-tag" id="modalTag"></span>
     <h3 id="modalTitle"></h3>
     <p id="modalDesc"></p>
@@ -563,12 +591,9 @@
     <button class="modal-close" id="aboutModalClose" aria-label="Fermer">✕</button>
     <h3 id="aboutModalTitle">À propos de moi</h3>
     <p>
-      
-      Je m'appelle David Jefferson AGBENYINOU  étudiant en 1<sup>ère</sup> année ASR (Administration Systèmes, Réseaux &amp; Sécurité Informatique) à ESGIS, Lomé.
+      Call me  David Jefferson AGBENYINOU, <br> Étudiant en première année d'administration des systèmes et réseaux informatiques, je me définis comme un administrateur système en devenir, guidé par une double passion pour le développement web full-stack et la sécurité informatique. C'est dans cette optique qu'en parallèle de mon cursus académique, je suis des cours en ligne pour maîtriser l'ensemble des technologies du web tout en développant des projets technologiques concrets, notamment en IoT. Inspiré par la démarche DevSecOps et désireux d'allier infrastructure et programmation, je projette, à l'issue de ma licence, de poursuivre un Master en cybersécurité afin de me spécialiser pleinement dans la protection et l'optimisation des architectures Systèmes d'Informations.
     </p>
-    <p style="margin-top: 1rem;">
-      Étudiant en première année d'administration des systèmes et réseaux informatiques, je me définis comme un administrateur système en devenir, guidé par une double passion pour le développement web full-stack et la sécurité informatique. C'est dans cette optique qu'en parallèle de mon cursus académique, je suis des cours en ligne pour maîtriser l'ensemble des technologies du web tout en développant des projets technologiques concrets, notamment en IoT. Inspiré par la démarche DevSecOps et désireux d'allier infrastructure et programmation, je projette, à l'issue de ma licence, de poursuivre un Master en cybersécurité afin de me spécialiser pleinement dans la protection et l'optimisation des architectures Systèmes d'Information.
-    </p>
+    
   </div>
 </div>
 
